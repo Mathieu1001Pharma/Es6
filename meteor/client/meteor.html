@@ -1,0 +1,37 @@
+<head>
+  <title>Ceci est un title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <header>
+
+  </header>
+  <section class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {{> tartiflette}}
+      </div>
+      <div class="add-form">
+        {{> form}}
+      </div>
+    </div>
+  </section>
+</body>
+
+<template name="tartiflette">
+<ul class="list-unstyled group-list">
+  {{#each msgs}}
+  <li class="list-group-item">
+    {{ user }}: {{ message }}
+  </li>
+  {{/each}}
+</ul>
+</template>
+
+<template name="form">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Message" id="input_message">
+    <button class="btn btn-primary">Envoyer</button>
+  </div>
+</template>
+
