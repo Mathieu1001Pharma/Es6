@@ -1,0 +1,10 @@
+<template name="msgs_list">
+    <ul class="list-unstyled group-list">
+        {{#each msgs}}
+        <li class="list-group-item clearfix">
+            {{ user }}: {{ message }}
+            <button class="btn btn-sm btn-default pull-right del-msg" title="Supprimer ce message"><i class="fa fa-trash-o"></i></button>
+        </li>
+        {{/each}}
+    </ul>
+</template>
