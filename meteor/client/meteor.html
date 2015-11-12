@@ -1,37 +1,50 @@
 <head>
-  <title>Ceci est un title</title>
-  <meta charset="UTF-8"/>
+    <title>Ceci est un title</title>
+    <meta charset="UTF-8" />
 </head>
-<body>
-  <header>
 
-  </header>
-  <section class="container">
-    <div class="row">
-      <div class="col-md-6">
-        {{> tartiflette}}
-      </div>
-      <div class="add-form">
-        {{> form}}
-      </div>
-    </div>
-  </section>
+<body>
+    <header>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="page-header">
+                <h1>Ma messagerie en Meteor&copy; <br/><small>swaag</small></h1>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3">
+                {{> msgs_list}}
+            </div>
+        </div>
+        <div class="add-form row">
+            {{> form_add_msg}}
+        </div>
+    </section>
 </body>
 
-<template name="tartiflette">
-<ul class="list-unstyled group-list">
-  {{#each msgs}}
-  <li class="list-group-item">
-    {{ user }}: {{ message }}
-  </li>
-  {{/each}}
-</ul>
+
+<template name="msgs_list">
+    <ul class="list-unstyled group-list">
+        {{#each msgs}}
+        <li class="list-group-item clearfix">
+            {{ user }}: {{ message }}
+            <button class="btn btn-sm btn-default pull-right del-msg" title="Supprimer ce message"><i class="fa fa-trash-o"></i></button>
+        </li>
+        {{/each}}
+    </ul>
 </template>
 
-<template name="form">
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Message" id="input_message">
-    <button class="btn btn-primary">Envoyer</button>
-  </div>
+<template name="form_add_msg">
+    <div>
+        <p class="form-group">
+            <label id="user-label" for="input_user">User</label>
+            <input type="text" class="form-control" placeholder="User" id="input_user" aria-describedby="user-label">
+        </p>
+        <p class="form-group">
+            <label id="user-message" for="input_message">Message</label>
+            <textarea id="input_message" class="form-control" rows="3" aria-describedby="user-message">Message</textarea>
+        </p>
+        <p>
+            <button class="btn btn-primary">Envoyer</button>
+        </p>
+    </div>
 </template>
-
