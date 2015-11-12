@@ -3,5 +3,3 @@ Template.form_add_msg.events({
     Messages.insert({user: $('#input_user').val(), message: $('#input_message').val() })
   }
 })
-
-console.log("dds")
