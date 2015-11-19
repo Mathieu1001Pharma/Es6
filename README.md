@@ -32,4 +32,30 @@ See : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_O
 
 This method allow to filter a list of object with parameters
 
+### Templating
+[Templating_fr](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Gabarit_cha%C3%AEnes_caract%C3%A8res)
+[Templating_en](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)
+
+### Backlog
+- callback
+- Dom
+- this
+
+### Ressources
+#### ES6
+> [ES6](https://github.com/ericdouglas/ES6-Learning)
+> [JS-Allongé](https://leanpub.com/javascriptallongesix/read)
+
+#### Let, Arrows
+> [Let](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/let)
+> 
+> [Arrows_fr](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
+> [Arrows_en](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+
+#### Regex
+> [JS Attitude](http://www.js-attitude.fr/2012/08/13/enfin-maitriser-les-expressions-rationnelles/)
+
+#### Linter
+> [Linter Subl](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48#.af1zl56az)
+
 
