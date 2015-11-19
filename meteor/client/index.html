@@ -1,5 +1,5 @@
 <head>
-    <title>Ceci est un title</title>
+    <title>Meteor Messagery to test ES6</title>
     <meta charset="UTF-8" />
 </head>
 
@@ -9,10 +9,11 @@
     <section class="container">
         <div class="row">
             <div class="page-header">
-                <h1>Ma messagerie en Meteor&copy; <br/><small>swaag</small></h1>
+                <h1>My Meteor<sup>&copy;</sup> messagery <br/><small>swaag</small></h1>
             </div>
             <div class="col-sm-6 col-sm-offset-3">
                 {{> msgs_list}}
+                {{> msgs_list_admin}}
             </div>
         </div>
         <div class="add-form row">
@@ -21,5 +22,13 @@
     </section>
 </body>
 
-
-
+<template name="msgs_list_admin">
+    <ul class="list-unstyled group-list">
+        {{#each adminTalk}}
+        <li class="list-group-item clearfix">
+            {{ user }}: {{ message }}
+            <button class="btn btn-sm btn-default pull-right del-msg" title="Supprimer ce message"><i class="fa fa-trash-o"></i></button>
+        </li>
+        {{/each}}
+    </ul>
+</template>
