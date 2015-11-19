@@ -2,6 +2,12 @@
 
 Bits of code with Meteor to test out es6 and babel
 
+## Questions
+> [css_next](http://cssnext.io/)
+> [rscss](http://rscss.io)
+
+## Points traités
+
 ### Transtyping
 
 To transtype a `string` or a `int` into a `boolean`
