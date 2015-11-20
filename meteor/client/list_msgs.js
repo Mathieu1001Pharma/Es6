@@ -1,20 +1,23 @@
-function findTheAdmin(message) {
-  return message.user === 'Mathieu'
-}
 function findTheLambda(message) {
   return message.user !== 'Mathieu'
 }
+function findTheAdmin(message) {
+  return message.user === 'Mathieu'
+}
+
 
 Template.msgs_list.helpers({
-  msgs: function () { return Messages.find().fetch().filter(findTheLambda) }
+  msgs: () =>  Messages.find().fetch().filter(findTheLambda)
 })
 
 Template.msgs_list_admin.helpers({
-  adminTalk: function () { return Messages.find().fetch().filter(findTheAdmin) }
+  adminTalk: () => Messages.find().fetch().filter(findTheAdmin)
 })
 
 Template.msgs_list.events({
-  'click .del-msg': function () {
-    Messages.remove(this._id)
-  }
+  'click .del-msg': (elt) => Messages.remove(elt.target.id)
+})
+
+Template.msgs_list_admin.events({
+  'click .del-msg': (elt) => Messages.remove(elt.target.id)
 })
